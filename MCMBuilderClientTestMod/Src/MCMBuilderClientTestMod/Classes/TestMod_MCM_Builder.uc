@@ -1,0 +1,1 @@
+class TestMod_MCM_Builder extends JsonConfig_MCM_Builder config(TestMCMBuilder);

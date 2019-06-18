@@ -1,0 +1,22 @@
+[TestMod_MCM_Builder]
+
+TESTMOD_SETTINGS_PAGE_TITLE="Test Mod"
+TESTMOD_SETTINGS_PAGE_LABEL="MCMBuilder Test Mod"
+
+TESTMOD_SETTINGS_GROUP_1_LABEL="First settings group"
+TESTMOD_SETTINGS_GROUP_2_LABEL="Second setting group"
+
+A_BOOL_PROPERTY_LABEL="Checkbox"
+A_BOOL_PROPERTY_TOOLTIP="A bool property checkbox"
+
+A_INT_PROPERTY_LABEL="Spinner"
+A_INT_PROPERTY_TOOLTIP="A int property spinner"
+
+A_FLOAT_PROPERTY_LABEL="Slider"
+A_FLOAT_PROPERTY_TOOLTIP="A float property slider"
+
+A_STRING_PROPERTY_LABEL="Dropdown"
+A_STRING_PROPERTY_TOOLTIP="A string property dropdown"
+
+A_LABEL_LABEL="Label"
+A_LABEL_TOOLTIP="Just a tooltip"
