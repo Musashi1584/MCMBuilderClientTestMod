@@ -165,7 +165,7 @@ ConfigManager.GetConfigBoolValue("HUNGRY")
 ```
 
 It will return the values that the user made in the mcm page or the default settings in case the user hasnt made any changes yet.
-For more information about the config system see the [JsonConfigManager Documentation](JSONCONFIGMANAGER.md)
+For more information about the config system see the [JsonConfigManager Documentation](https://github.com/Musashi1584/MusashisModToolbox/blob/master/JSONCONFIGMANAGER.md)
 
 ### Thats all!
 The MCMBuilder in Musashis Mod Toolbox will take care of the rest.
