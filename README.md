@@ -160,7 +160,7 @@ You can access the values in your mod like
 ```unrealscript
 local JsonConfig_ManagerInterface ConfigManager;
 
-ConfigManager = class'MMT_SingletonFactoryInterface'.static.GetManagerInstance("MCMBuilderClientTestModConfigManager");
+ConfigManager = class'ConfigFactory'.static.GetConfigManager("MCMBuilderClientTestModConfigManager");
 ConfigManager.GetConfigBoolValue("HUNGRY")
 ```
 
