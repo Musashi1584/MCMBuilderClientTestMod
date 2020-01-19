@@ -32,9 +32,9 @@ static function CHEventListenerTemplate CreateListenerTemplate_MCMBuilderListene
 
 static function EventListenerReturn OnMCM_ButtonClick(Object EventData, Object EventSource, XComGameState GameState, Name Event, Object CallbackData)
 {
-	if (TestMod_MCM_Builder(EventSource) != none)
+	if (EventSource != none)
 	{
-		`LOG(default.class @ GetFuncName(),, 'MCMBuilderClientTestMod');
+		`LOG(default.class @ GetFuncName() @ EventSource,, 'MCMBuilderClientTestMod');
 	}
 
 	return ELR_NoInterrupt;
@@ -46,9 +46,9 @@ static function EventListenerReturn OnMCM_ChangeHandler(Object EventData, Object
 
 	Tuple = XComLWTuple(EventSource);
 
-	if (TestMod_MCM_Builder(Tuple.Data[0].o) != none)
+	if (Tuple.Data[0].o != none)
 	{
-		`LOG(default.class @ GetFuncName() @ Tuple.Data[1].s,, 'MCMBuilderClientTestMod');
+		`LOG(default.class @ GetFuncName() @ Tuple.Data[0].o @ Tuple.Data[1].s,, 'MCMBuilderClientTestMod');
 	}
 
 	return ELR_NoInterrupt;
@@ -60,9 +60,9 @@ static function EventListenerReturn OnMCM_SaveHandler(Object EventData, Object E
 
 	Tuple = XComLWTuple(EventSource);
 
-	if (TestMod_MCM_Builder(Tuple.Data[0].o) != none)
+	if (Tuple.Data[0].o != none)
 	{
-		`LOG(default.class @ GetFuncName() @ Tuple.Data[1].s,, 'MCMBuilderClientTestMod');
+		`LOG(default.class @ GetFuncName() @ Tuple.Data[0].o @ Tuple.Data[1].s,, 'MCMBuilderClientTestMod');
 	}
 
 	return ELR_NoInterrupt;
@@ -74,9 +74,9 @@ static function EventListenerReturn OnMCM_SaveButtonClicked(Object EventData, Ob
 
 	Tuple = XComLWTuple(EventSource);
 
-	if (TestMod_MCM_Builder(Tuple.Data[0].o) != none)
+	if (Tuple.Data[0].o != none)
 	{
-		`LOG(default.class @ GetFuncName(),, 'MCMBuilderClientTestMod');
+		`LOG(default.class @ Tuple.Data[0].o @ GetFuncName(),, 'MCMBuilderClientTestMod');
 	}
 
 	return ELR_NoInterrupt;
@@ -84,9 +84,9 @@ static function EventListenerReturn OnMCM_SaveButtonClicked(Object EventData, Ob
 
 static function EventListenerReturn OnMCM_ConfigSaved(Object EventData, Object EventSource, XComGameState GameState, Name Event, Object CallbackData)
 {
-	if (TestMod_MCM_Builder(EventSource) != none)
+	if (EventSource != none)
 	{
-		`LOG(default.class @ GetFuncName(),, 'MCMBuilderClientTestMod');
+		`LOG(default.class @ GetFuncName() @ EventSource,, 'MCMBuilderClientTestMod');
 		MakePopup();
 	}
 
@@ -95,9 +95,9 @@ static function EventListenerReturn OnMCM_ConfigSaved(Object EventData, Object E
 
 static function EventListenerReturn OnMCM_ResetButtonClicked(Object EventData, Object EventSource, XComGameState GameState, Name Event, Object CallbackData)
 {
-	if (TestMod_MCM_Builder(EventSource) != none)
+	if (EventSource != none)
 	{
-		`LOG(default.class @ GetFuncName(),, 'MCMBuilderClientTestMod');
+		`LOG(default.class @ GetFuncName() @ EventSource,, 'MCMBuilderClientTestMod');
 	}
 
 	return ELR_NoInterrupt;
@@ -105,9 +105,9 @@ static function EventListenerReturn OnMCM_ResetButtonClicked(Object EventData, O
 
 static function EventListenerReturn OnMCM_ConfigResetted(Object EventData, Object EventSource, XComGameState GameState, Name Event, Object CallbackData)
 {
-	if (TestMod_MCM_Builder(EventSource) != none)
+	if (EventSource != none)
 	{
-		`LOG(default.class @ GetFuncName(),, 'MCMBuilderClientTestMod');
+		`LOG(default.class @ GetFuncName() @ EventSource,, 'MCMBuilderClientTestMod');
 	}
 
 	return ELR_NoInterrupt;
@@ -116,13 +116,17 @@ static function EventListenerReturn OnMCM_ConfigResetted(Object EventData, Objec
 simulated static function MakePopup()
 {
 	local TDialogueBoxData kDialogData;
+	local JsonConfig_ManagerInterface ConfigManager;
+
+	ConfigManager = class'MMT_SingletonFactoryInterface'.static.GetManagerInstance("MCMBuilderClientTestModConfigManager");
+
 	kDialogData.eType = eDialog_Warning;
 	kDialogData.strTitle = "MCM Settings Saved";
 	kDialogData.strText = 
-		class'TestModUserSettingsConfigManager'.static.GetConfigBoolValue("A_BOOL_PROPERTY") $ "\n" $
-		class'TestModUserSettingsConfigManager'.static.GetConfigIntValue("A_INT_PROPERTY") $ "\n" $
-		class'TestModUserSettingsConfigManager'.static.GetConfigFloatValue("A_FLOAT_PROPERTY") $ "\n" $
-		class'TestModUserSettingsConfigManager'.static.GetConfigStringValue("A_STRING_PROPERTY");
+		ConfigManager.GetConfigBoolValue("A_BOOL_PROPERTY") $ "\n" $
+		ConfigManager.GetConfigIntValue("A_INT_PROPERTY") $ "\n" $
+		ConfigManager.GetConfigFloatValue("A_FLOAT_PROPERTY") $ "\n" $
+		ConfigManager.GetConfigStringValue("A_STRING_PROPERTY");
 	//kDialogData.fnCallback = OKClickedGeneric;
 
 	kDialogData.strAccept = class'UIUtilities_Text'.default.m_strGenericContinue;

@@ -12,20 +12,19 @@
     <Folder Include="Config\" />
     <Folder Include="Localization\" />
     <Folder Include="Src\" />
+    <Folder Include="Src\JsonConfigManagerInterfaces\Classes" />
     <Folder Include="Src\MCMBuilderClientTestMod\" />
     <Folder Include="Src\MCMBuilderClientTestMod\Classes\" />
+    <Folder Include="Src\JsonConfigManagerInterfaces" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Config\XComTestModDefaultSettings.ini">
+    <Content Include="Config\XComJsonConfigManager.ini">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Config\XComTestMCMBuilder.ini">
+    <Content Include="Config\XComMCMBuilder.ini">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Config\XComUI.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Localization\MCMBuilderClientTestMod.int">
+    <Content Include="Localization\MusashisModToolbox.int">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ReadMe.txt" />
@@ -33,14 +32,13 @@
     <Content Include="Config\XComEditor.ini" />
     <Content Include="Config\XComEngine.ini" />
     <Content Include="Config\XComGame.ini" />
-    <Content Include="Localization\XComGame.int" />
-    <Content Include="Src\MCMBuilderClientTestMod\Classes\TestModDefaultSettingsConfigManager.uc">
+    <Content Include="Src\JsonConfigManagerInterfaces\Classes\ConfigFactory.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\MCMBuilderClientTestMod\Classes\TestModUserSettingsConfigManager.uc">
+    <Content Include="Src\JsonConfigManagerInterfaces\Classes\JsonConfig_ManagerInterface.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\MCMBuilderClientTestMod\Classes\TestMod_MCM_Builder.uc">
+    <Content Include="Src\JsonConfigManagerInterfaces\Classes\MMT_SingletonFactoryInterface.uc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\MCMBuilderClientTestMod\Classes\X2DownloadableContentInfo_MCMBuilderClientTestMod.uc" />

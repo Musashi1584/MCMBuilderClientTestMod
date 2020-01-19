@@ -1,1 +1,0 @@
-class TestModDefaultSettingsConfigManager extends JsonConfig_Manager config(TestModDefaultSettings);
