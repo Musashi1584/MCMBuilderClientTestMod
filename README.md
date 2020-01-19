@@ -15,13 +15,13 @@ Lets get right down to it and have a look at this example config:
 		"SaveConfigManager": "MCMBuilderClientTestModConfigManager",\\
 		"EnableResetButton": "true", \\
 		"TESTMOD_SETTINGS_GROUP_1":{ \\
-			"HUNGRY":							{ "Type": "Checkbox" }, \\
-			"HUNGER_SCALE_NERD":				{ "Type": "Slider", "SliderMin": "0.0", "SliderMax": "1.0", "SliderStep":"0.1" }, \\
-			"HUNGER_SCALE":						{ "Type": "Spinner", "Options": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10" }, \\
-			"FOOD":								{ "Type": "Dropdown", "Options": "Apple, Chocolate, Burger" }, \\
+			"HUNGRY":		{ "Type": "Checkbox" }, \\
+			"HUNGER_SCALE_NERD":	{ "Type": "Slider", "SliderMin": "0.0", "SliderMax": "1.0", "SliderStep":"0.1" }, \\
+			"HUNGER_SCALE":		{ "Type": "Spinner", "Options": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10" }, \\
+			"FOOD":			{ "Type": "Dropdown", "Options": "Apple, Chocolate, Burger" }, \\
 		}, \\
 		"TESTMOD_SETTINGS_GROUP_2":{ \\
-			"A_LABEL":							{ "Type": "Label" }, \\
+			"A_LABEL":		{ "Type": "Label" }, \\
 		}, \\
 	}, \\
 }
@@ -61,10 +61,10 @@ this just tells the builder if you want to display a reset button on your page.
 
 ### Elements
 ```
-"HUNGRY":							{ "Type": "Checkbox" }, \\
-"HUNGER_SCALE_NERD":				{ "Type": "Slider", "SliderMin": "0.0", "SliderMax": "1.0", "SliderStep":"0.1" }, \\
-"HUNGER_SCALE":						{ "Type": "Spinner", "Options": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10" }, \\
-"FOOD":								{ "Type": "Dropdown", "Options": "Apple, Chocolate, Burger" }, \\
+"HUNGRY":		{ "Type": "Checkbox" }, \\
+"HUNGER_SCALE_NERD":	{ "Type": "Slider", "SliderMin": "0.0", "SliderMax": "1.0", "SliderStep":"0.1" }, \\
+"HUNGER_SCALE":		{ "Type": "Spinner", "Options": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10" }, \\
+"FOOD":			{ "Type": "Dropdown", "Options": "Apple, Chocolate, Burger" }, \\
 ```
 
 These are the actual mcm elements that are displayed.
@@ -110,13 +110,13 @@ Lets see there contents in detail:
 		"SaveConfigManager": "YourModConfigManager",\\
 		"EnableResetButton": "true", \\
 		"TESTMOD_SETTINGS_GROUP_1":{ \\
-			"HUNGRY":							{ "Type": "Checkbox" }, \\
-			"HUNGER_SCALE_NERD":				{ "Type": "Slider", "SliderMin": "0.0", "SliderMax": "1.0", "SliderStep":"0.1" }, \\
-			"HUNGER_SCALE":						{ "Type": "Spinner", "Options": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10" }, \\
-			"FOOD":								{ "Type": "Dropdown", "Options": "Apple, Chocolate, Burger" }, \\
+			"HUNGRY":		{ "Type": "Checkbox" }, \\
+			"HUNGER_SCALE_NERD":	{ "Type": "Slider", "SliderMin": "0.0", "SliderMax": "1.0", "SliderStep":"0.1" }, \\
+			"HUNGER_SCALE":		{ "Type": "Spinner", "Options": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10" }, \\
+			"FOOD":			{ "Type": "Dropdown", "Options": "Apple, Chocolate, Burger" }, \\
 		}, \\
 		"TESTMOD_SETTINGS_GROUP_2":{ \\
-			"A_LABEL":							{ "Type": "Label" }, \\
+			"A_LABEL":		{ "Type": "Label" }, \\
 		}, \\
 	}, \\
 }
