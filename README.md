@@ -68,7 +68,7 @@ this just tells the builder if you want to display a reset button on your page.
 ```
 
 These are the actual mcm elements that are displayed.
-The identifiers (like "HUNGRY") are actual referencing config properties from the JsonConfigManager System.
+The identifiers (like "HUNGRY") are actually referencing config properties from the JsonConfigManager System.
 
 localization works the same as with pages and groups:
 Just define localization properties following the convention:
